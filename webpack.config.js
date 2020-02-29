@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 const ScssConfigWebpackPlugin = require('scss-config-webpack-plugin');
 
 module.exports = {
@@ -8,7 +7,6 @@ module.exports = {
     entry: {
         app: './src/index.js',
     },
-
     module: {
         rules: [
             {
@@ -21,21 +19,17 @@ module.exports = {
     resolve: {
         extensions: [ '.tsx', '.ts', '.js' ],
     },
-
     devServer: {
         contentBase: './',
         compress: true,
         port: 9000
     },
-
     plugins: [
         new HtmlWebpackPlugin(),
         new ScssConfigWebpackPlugin(),
     ],
-
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
     },
-
 };

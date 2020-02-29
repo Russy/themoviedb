@@ -8,9 +8,8 @@ function component() {
 
     const element = document.createElement('div');
 
-    const header = new Header();
     element.innerHTML = _.join([
-        header.render()
+        Header.render()
     ], ' ');
 
     return element;
