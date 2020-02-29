@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
+    "build-ts": "cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack",
     "watch": "webpack --watch",
     "start": "webpack-dev-server --open"
   },
@@ -21,13 +22,25 @@
   },
   "homepage": "https://github.com/Russy/themoviedb#readme",
   "devDependencies": {
+    "@types/node": "^13.7.7",
+    "@types/webpack": "^4.41.7",
+    "@types/webpack-dev-server": "^3.10.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
     "clean-webpack-plugin": "^3.0.0",
+    "common-config-webpack-plugin": "^1.4.0",
+    "html-webpack-partials-plugin": "^0.5.3",
     "html-webpack-plugin": "^3.2.0",
+    "ts-loader": "^6.2.1",
+    "ts-node": "^8.6.2",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.8.3",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "scss-config-webpack-plugin": "latest"
   }
 }

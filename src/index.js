@@ -1,11 +1,18 @@
-import _ from 'lodash';
+
+import * as _ from 'lodash';
+import "./style.scss";
+
+import Header from "./modules/header"
 
 function component() {
+
     const element = document.createElement('div');
 
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = _.join(['Hello 3', 'webp 2ack'], ' ');
-        console.log('sdfsd 3f');
+    const header = new Header();
+    element.innerHTML = _.join([
+        header.render()
+    ], ' ');
+
     return element;
 }
 
